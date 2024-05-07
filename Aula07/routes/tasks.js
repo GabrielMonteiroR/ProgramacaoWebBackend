@@ -44,7 +44,7 @@ router.put("/tasks/:id", (req, res) => {
     const data = req.body
     const task = tasks.find(task => task.id === id)
 
-    if (!task) return res.status(404).json({ message: "Movie not found" })
+    if (!task) return res.status(404).json({ message: "Task not found" })
     task.description = data.description
     res.json({ message: "TASK UPDATED" })
 })
